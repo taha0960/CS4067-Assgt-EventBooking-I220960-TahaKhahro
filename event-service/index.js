@@ -7,7 +7,8 @@ const eventRoutes = require("./routes/eventRoutes");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({ origin: "*" }));  // Allow all frontend requests
+
 app.use(express.json());
 
 // Connect to Database
